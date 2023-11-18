@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 [CreateAssetMenu(fileName = "New Rule Tile", menuName = "Tiles/Rule Tile")]
 
-public class BaseIsometric : RuleTile //RuleTile save data
+public class BaseIsometric1 : RuleTile //RuleTile save data
 {
     public bool Walkable;
     public TileType TileType;
@@ -17,7 +17,7 @@ public class BaseIsometric : RuleTile //RuleTile save data
     }
 }
 
-public enum TileType
+public enum TileType1
 {
     Grass,
     Ground,

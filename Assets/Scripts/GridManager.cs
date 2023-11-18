@@ -49,7 +49,7 @@ public class GridManager : MonoBehaviour
         tileList = new Dictionary<Vector2, TileNode>();
         foreach (var position in tileMap.cellBounds.allPositionsWithin)
         {
-            BaseIsometric ruleTile = (BaseIsometric) tileMap.GetTile(position);
+            BaseIsometric1 ruleTile = (BaseIsometric1) tileMap.GetTile(position);
 
             var spawnedObject = tileMap.GetInstantiatedObject(position);
             if (spawnedObject == null) continue;
