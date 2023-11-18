@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: WaterGround
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: 21300000, guid: 91d8bedb225e3cf4bb9daede151fc12d, type: 3}
-  m_DefaultGameObject: {fileID: 7773506789688220840, guid: d70e9643327fb2742a91b0b813687dbe, type: 3}
+  m_DefaultGameObject: {fileID: 7188363924578499636, guid: 136f9bd97abcf334b98b8559793f28f3, type: 3}
   m_DefaultColliderType: 0
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
     - {fileID: 21300000, guid: 91d8bedb225e3cf4bb9daede151fc12d, type: 3}
-    m_GameObject: {fileID: 7773506789688220840, guid: d70e9643327fb2742a91b0b813687dbe, type: 3}
+    m_GameObject: {fileID: 7188363924578499636, guid: 136f9bd97abcf334b98b8559793f28f3, type: 3}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
     m_PerlinScale: 0.5
@@ -37,5 +37,6 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
     m_RuleTransform: 0
-  Walkable: 0
+  Walkable: 1
   TileType: 2
+  TerrainCost: 1

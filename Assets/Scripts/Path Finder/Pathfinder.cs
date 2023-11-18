@@ -62,28 +62,37 @@ public class Pathfinder : MonoBehaviour
         List<TileNode> tiles = new List<TileNode>();
         GridManager grid = GridManager.instance;
 
-        //Left Down
-        if (grid.GetTile(origin.x - 1, origin.y - 1, out TileNode tileLD))
-            tiles.Add(tileLD);
-        //Left Up
-        if (grid.GetTile(origin.x, origin.y - 1, out TileNode tileLU))
-            tiles.Add(tileLU);
+        // Top
+        if (grid.GetTile(origin.x + 1, origin.y + 1, out TileNode tileTop))
+            tiles.Add(tileTop);
 
-        //Right Down
-        if (grid.GetTile(origin.x - 1, origin.y + 1, out TileNode tileRD))
-            tiles.Add(tileRD);
+        // Top Right
+        if (grid.GetTile(origin.x + 1, origin.y, out TileNode tileTopRight))
+            tiles.Add(tileTopRight);
 
-        //Right Up
-        if(grid.GetTile(origin.x, origin.y + 1, out TileNode tileRU))
-            tiles.Add(tileRU);
+        // Right
+        if (grid.GetTile(origin.x + 1, origin.y - 1, out TileNode tileRight))
+            tiles.Add(tileRight);
 
-        //Up
+        // Bottom Right
+        if (grid.GetTile(origin.x, origin.y - 1, out TileNode tileBottomRight))
+            tiles.Add(tileBottomRight);
 
-        if (grid.GetTile(origin.x + 1, origin.y , out TileNode tileU))
-            tiles.Add(tileU);
-        //Down
-        if (grid.GetTile(origin.x - 1, origin.y, out TileNode tileD))
-            tiles.Add(tileD);
+        // Bottom
+        if (grid.GetTile(origin.x - 1, origin.y - 1, out TileNode tileBottom))
+            tiles.Add(tileBottom);
+
+        // Bottom Left
+        if (grid.GetTile(origin.x - 1, origin.y, out TileNode tileBottomLeft))
+            tiles.Add(tileBottomLeft);
+
+        // Left
+        if (grid.GetTile(origin.x - 1, origin.y + 1, out TileNode tileLeft))
+            tiles.Add(tileLeft);
+
+        // Top Left
+        if (grid.GetTile(origin.x, origin.y + 1, out TileNode tileTopLeft))
+            tiles.Add(tileTopLeft);
 
         return tiles;
     }

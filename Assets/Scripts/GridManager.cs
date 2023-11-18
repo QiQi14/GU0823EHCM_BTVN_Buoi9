@@ -65,6 +65,7 @@ public class GridManager : MonoBehaviour
                 spawnedTile.y = position.y;
 
                 TileDataSet tileData = new TileDataSet();
+                tileData.terrainCost = ruleTile.TerrainCost;
                 spawnedTile.tileData = tileData;
             }
         }
