@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pathfinder : MonoBehaviour
 {
-    public Path FindPath(TileNode origin, TileNode target)
+    public Path FindPath(IsoTileNode origin, IsoTileNode target)
     {
         List<IsoTileNode> openSet = new List<IsoTileNode>();
         List<IsoTileNode> closedSet = new List<IsoTileNode>();
@@ -26,7 +26,7 @@ public class Pathfinder : MonoBehaviour
                 return PathBetween(target, origin);
             }
 
-            foreach (TileNode neighborNode in NeighborTiles(currentTile))
+            foreach (IsoTileNode neighborNode in NeighborTiles(currentTile))
             {
                 if (closedSet.Contains(neighborNode))
                     continue;
