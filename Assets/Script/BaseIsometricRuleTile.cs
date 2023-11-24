@@ -7,14 +7,10 @@ using UnityEngine.Tilemaps;
 
 public class BaseIsometric : RuleTile //RuleTile save data
 {
-    public bool walkable;
+    public bool Walkable;
     public TileType TileType;
-
-    public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
-    {
-        base.GetTileData(position, tilemap, ref tileData);
-    }
 }
+
 
 public enum TileType
 {

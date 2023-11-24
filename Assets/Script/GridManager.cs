@@ -41,7 +41,7 @@ public class GridManager : MonoBehaviour
 
     private void MapRuleTileToTile()
     {
-        Vector3Int min =  tileMap.cellBounds.min;
+        Vector3Int min = tileMap.cellBounds.min;
         Vector3Int max = tileMap.cellBounds.max;
 
         width = Mathf.Abs(max.x - min.x);
@@ -49,7 +49,7 @@ public class GridManager : MonoBehaviour
         tileList = new Dictionary<Vector2, TileNode>();
         foreach (var position in tileMap.cellBounds.allPositionsWithin)
         {
-            BaseRuleTile ruleTile = (BaseRuleTile) tileMap.GetTile(position);
+            BaseIsometric ruleTile = (BaseIsometric)tileMap.GetTile(position);
 
             var spawnedObject = tileMap.GetInstantiatedObject(position);
             if (spawnedObject == null) continue;
@@ -65,7 +65,6 @@ public class GridManager : MonoBehaviour
                 spawnedTile.y = position.y;
 
                 TileDataSet tileData = new TileDataSet();
-                tileData.terrainCost = ruleTile.TerrainCost;
                 spawnedTile.tileData = tileData;
             }
         }
@@ -76,7 +75,8 @@ public class GridManager : MonoBehaviour
     public bool GetTile(int x, int y, out TileNode newTile)
     {
         newTile = null;
-        if (tileList.TryGetValue(new Vector2(x, y), out TileNode tile)) { 
+        if (tileList.TryGetValue(new Vector2(x, y), out TileNode tile))
+        {
             newTile = tile;
             return true;
         }
