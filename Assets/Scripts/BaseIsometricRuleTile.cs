@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-
+namespace BaseIso { 
 [CreateAssetMenu(fileName = "New Rule Tile", menuName = "Tiles/Rule Tile")]
 
 public class BaseIsometric : RuleTile //RuleTile save data
@@ -30,4 +30,5 @@ public enum TileType
     Flower,
     Tree1,
     Tree2,
+}
 }
