@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Path
 {
-    public TileNode[] tiles;
+    public IsoTileNode[] tiles;
 }

@@ -9,7 +9,7 @@ public class CombatManager : MonoBehaviour
 
     public static CombatManager instance;
 
-    public TileNode currentTile;
+    public IsoTileNode currentTile;
     private HeroBase selectedCharacter;
 
     private void Awake()

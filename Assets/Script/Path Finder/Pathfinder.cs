@@ -6,8 +6,8 @@ public class Pathfinder : MonoBehaviour
 {
     public Path FindPath(TileNode origin, TileNode target)
     {
-        List<TileNode> openSet = new List<TileNode>();
-        List<TileNode> closedSet = new List<TileNode>();
+        List<IsoTileNode> openSet = new List<IsoTileNode>();
+        List<IsoTileNode> closedSet = new List<IsoTileNode>();
 
         openSet.Add(origin);
         origin.tileData.costFromOrigin = 0;
@@ -63,36 +63,31 @@ public class Pathfinder : MonoBehaviour
         GridManager grid = GridManager.instance;
 
         //Left Down
-        if (grid.GetTile(origin.x - 1, origin.y - 1, out TileNode tileLD))
-            tiles.Add(tileLD);
+        
+
         //Left Up
-        if (grid.GetTile(origin.x, origin.y - 1, out TileNode tileLU))
-            tiles.Add(tileLU);
+        
 
         //Right Down
-        if (grid.GetTile(origin.x - 1, origin.y + 1, out TileNode tileRD))
-            tiles.Add(tileRD);
+        
 
         //Right Up
-        if(grid.GetTile(origin.x, origin.y + 1, out TileNode tileRU))
-            tiles.Add(tileRU);
+       
 
         //Up
 
-        if (grid.GetTile(origin.x + 1, origin.y , out TileNode tileU))
-            tiles.Add(tileU);
+        
         //Down
-        if (grid.GetTile(origin.x - 1, origin.y, out TileNode tileD))
-            tiles.Add(tileD);
+        
 
         return tiles;
     }
 
-    public Path PathBetween(TileNode target,  TileNode origin)
+    public Path PathBetween(IsoTileNode target,  IsoTileNode origin)
     {
         Path path = new Path();
-        List<TileNode> tiles = new List<TileNode>();
-        TileNode currentTile = target;
+        List<IsoTileNode> tiles = new List<IsoTileNode>();
+        IsoTileNode currentTile = target;
 
         while (currentTile != origin)
         {

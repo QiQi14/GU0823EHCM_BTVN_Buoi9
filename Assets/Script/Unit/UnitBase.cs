@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnitBase : MonoBehaviour
 {
-    public TileNode occupiedTile;
+    public IsoTileNode occupiedTile;
     public Faction faction;
     private float moveSpeed = 1f;
 
@@ -18,7 +18,7 @@ public class UnitBase : MonoBehaviour
     {
         int currentStep = 0;
         int pathLength = path.tiles.Length - 1;
-        TileNode currentTile = path.tiles[currentStep];
+        IsoTileNode currentTile = path.tiles[currentStep];
         float animationTime = 0f;
 
         while (currentStep <= pathLength)
