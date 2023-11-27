@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd359b40894c86d4b9af994874926953, type: 3}
-  m_Name: Tree2
+  m_Name: Waterflow 1
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: a4ac16dc296fef74cb04f085cc998d67, type: 3}
+  m_DefaultSprite: {fileID: 21300000, guid: e52145434309130448848d7c04758fd5, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules: []
   Walkable: 0
-  TileType: 11
+  TileType: 4
   TerrainCost: 0

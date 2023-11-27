@@ -32,9 +32,11 @@ public class CombatManager : MonoBehaviour
 
     public void clear()
     {
+        Debug.Log(currentTile);
+        Debug.Log(selectedCharacter);
         if (currentTile == null || selectedCharacter == null)
             return;
-
+        
         selectedCharacter.ClearSelected();
         currentTile = null;
     }

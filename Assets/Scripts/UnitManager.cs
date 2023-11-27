@@ -9,14 +9,17 @@ public class UnitManager : MonoBehaviour
     private void Awake()
     {
         listUnit = Resources.LoadAll<UnitSO>("Unit").ToList();
+        Debug.Log(listUnit.Count);
         GameManager.OnGameStateChanged += OnStateChanged;
     }
 
     private void OnStateChanged(GameState state)
     {
+        Debug.Log(state.ToString());
         if (state == GameState.SpawnUnit)
         {
             spawnUnit();
+
         }
     }
 
@@ -25,7 +28,7 @@ public class UnitManager : MonoBehaviour
         for (int i = 0; i < listUnit.Count; i++)
         {
             var spawnedUnit = Instantiate(listUnit[i].unitPrefab);
-
+            Debug.Log(spawnedUnit);
             TileNode randomSpawnTile = GridManager.instance.GetRandomTile();
 
             spawnedUnit.transform.position = new Vector3(randomSpawnTile.transform.position.x, randomSpawnTile.transform.position.y, 0f);

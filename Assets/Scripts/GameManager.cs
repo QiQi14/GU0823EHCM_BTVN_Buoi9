@@ -21,13 +21,14 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateGameState(GameState.Menu);
+        UpdateGameState(GameState.GenerateMap);
     }
 
     public void UpdateGameState(GameState newState)
     {
         gameState = newState;
         OnGameStateChanged?.Invoke(gameState);
+        Debug.Log(gameState.ToString());
     }
 }
 

@@ -13,7 +13,6 @@ public class TileNode : MonoBehaviour
     public TileType tileType;
     public TileDataSet tileData;
     public TileNode previousTile;
-
     public UnitBase occupiedUnit;
 
     public bool isAvailable => Walkable && occupiedUnit != null;
@@ -32,6 +31,7 @@ public class TileNode : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Debug.Log(CombatManager.instance);
         CombatManager.instance.clear();
         CombatManager.instance.currentTile = this;
         CombatManager.instance.inspectTile();
